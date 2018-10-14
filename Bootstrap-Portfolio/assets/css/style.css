@@ -1,0 +1,44 @@
+.navbar {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 3px solid #dddddd;
+  background-color: #ffffff;
+  background-image: none;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 49px;
+}
+
+
+
+/*nav links*/
+.navbar-brand {
+  float: left;
+  width: 250px;
+  height: 90px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background: #4aaaa5;
+  }
+
+
+}
+/*.navbar-inverse .navbar-inverse .navbar-nav > li > a{
+  color: white;
+  font-weight:normal;
+  text-shadow: none;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a{
+  background-color: #2dbe5f;
+  background-image: none;
+  box-shadow: none;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a:hover{
+  background-color: #2da653 !important;
+  background-image: none;
+}*/
