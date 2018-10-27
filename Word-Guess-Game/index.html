@@ -4,20 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Word Guess Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-        <div id= "gameText">Press any key to get started!</div>   
-        <div id="answer"></div>
-        <div id="numWins"></div>
-        <div id="currentWord" style="white-space: pre"></div>
-        <div id="incorrectGuesses"></div>
-        <div id="lettersGuessed"></div>
-        <div id="gameOutcome"></div>
-        <div id="playAgainQuestion"></div>
- 
-        <script src="assets/javascript/game.js"></script>
-
+    <div class="container">
+      <header>
+          <h1 align="center">GAME OF THRONES</h1>
+          <h3 align="center">When you play a game of thrones, you win or you die.</h3>
+      </header>
+      <div class="row">
+            <div class="col-md-12 game-text">  
+            <div id="answer"><p></p></div>
+            <div id="currentWord" style="white-space: pre"></div>
+            <div id="numWins"></div>
+            <div id="incorrectGuesses"></div>
+            <div id="lettersGuessed"></div>
+            <div id="gameOutcome"></div>
+            <div id="playAgainQuestion">
+          </div>    
+        </div>
+      </div>      
+      <div class="row">
+        <div class="col-md-12 footer vertical-center">
+            
+            
+            <div id="instruction1">You have 6 chances to guess the Game of Thrones character</div>
+            <div id="instruction2">Press any key to get started!</div>
+          </div>   
+        </div>    
+      </div>  
+            
+          
+    </div>
+  <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>

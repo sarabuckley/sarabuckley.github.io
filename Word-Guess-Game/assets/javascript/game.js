@@ -1,9 +1,9 @@
 
 //define your variables 
-var gotChoices = ["Daenerys Targaryen", "Jon Snow", "Gregor Clegane", "Cersei Lannister"];
+var gotChoices = ["Daenerys Targaryen", "Jon Snow", "Gregor Clegane", "Cersei Lannister", "Tyrion Lannister", "Arya Stark", "Sansa Stark", "Khal Drogo", "Joffrey Baratheon","Petyr Baelish", "Eddard Stark", "Sandor Clegane", "Robb Stark", "Jaime Lannister", "Bronn", "Ramsey Bolton", "Ygritte", "Theon Greyjoy" ];
 var gotLetterGuesses = [];
 var gotUnderscores = [];
-var maxIncorrectGuesses=5;
+var maxIncorrectGuesses=6;
 var numIncorrectGuesses=0;
 var letterMatch=false;
 var numberWins=0;
@@ -24,6 +24,8 @@ function initGame() {
     numIncorrectGuesses = 0;
     document.getElementById("gameOutcome").textContent = "";
     document.getElementById("playAgainQuestion").textContent = "";  
+    document.getElementById("instruction1").textContent = "";
+    document.getElementById("instruction2").textContent = "";  
 
     //randomly select inital value for word
     gotName = gotChoices[Math.floor(Math.random() * gotChoices.length)];
@@ -39,7 +41,7 @@ function initGame() {
         }     
     }   
     //display on screen                
-    document.getElementById("currentWord").textContent = "Current Word: " + gotUnderscores.join(" ");
+    document.getElementById("currentWord").textContent = "Character Name:  " + gotUnderscores.join(" ");
     document.getElementById("lettersGuessed").textContent = "Letters Already Guessed: " + gotLetterGuesses.join(" ");
     document.getElementById("incorrectGuesses").textContent = "Numbers of Guesses Remaining: " + (maxIncorrectGuesses - numIncorrectGuesses);
     document.getElementById("numWins").textContent = "Wins: " + numberWins;
@@ -86,28 +88,27 @@ function checkGuess (letter){
     }
     
     if (gameState=="In-Play") {
-        document.getElementById("currentWord").textContent  = "Current Word: " + gotUnderscores.join(" ");
+        document.getElementById("currentWord").textContent  = "Character Name:  " + gotUnderscores.join(" ");
         document.getElementById("lettersGuessed").textContent = "Letters Already Guessed: " + gotLetterGuesses.join(" ");
         document.getElementById("incorrectGuesses").textContent = "Numbers of Guesses Remaining: " + (maxIncorrectGuesses - numIncorrectGuesses);
         document.getElementById("numWins").textContent = "Wins: " + numberWins;
     } else if (gameState=="Win") {
-        document.getElementById("currentWord").textContent  = "Current Word: " + gotUnderscores.join(" ");
+        document.getElementById("currentWord").textContent  = "Character Name:  " + gotUnderscores.join(" ");
         document.getElementById("lettersGuessed").textContent = "Letters Already Guessed: " + gotLetterGuesses.join(" ");
         document.getElementById("numWins").textContent = "Wins: " + numberWins;
-        document.getElementById("gameOutcome").textContent = "Congratulations! You guessed the word!";  
-        document.getElementById("playAgainQuestion").textContent = "Hit any key to play again.";  
+        document.getElementById("instruction1").textContent = "Congratulations! You guessed correctly!";  
+        document.getElementById("instruction2").textContent = "Hit any key to play again.";  
     } else if (gameState=="Fail") {
-        document.getElementById("currentWord").textContent  = "Current Word: " + gotUnderscores.join(" ");
+        document.getElementById("currentWord").textContent  = "Character Name:  " + gotUnderscores.join(" ");
         document.getElementById("lettersGuessed").textContent = "Letters Already Guessed: " + gotLetterGuesses.join(" ");
         document.getElementById("incorrectGuesses").textContent = "Numbers of Guesses Remaining: " + (maxIncorrectGuesses - numIncorrectGuesses);
         document.getElementById("numWins").textContent = "Wins: " + numberWins;
-        document.getElementById("gameOutcome").textContent = "Sorry! You used up all of your chances and didn't guess the word.";
-        document.getElementById("playAgainQuestion").textContent = "Hit any key to play again.";  
+        document.getElementById("instruction1").textContent = "Stop! You have used up all of your chances. " + gotName + " will not forget your disloyalty.";
+        document.getElementById("instruction2").textContent = "Hit any key to play again.";  
     }    
 
 
 }        
-
 
 //FUNCTION: compareWords
 function compareWords(value1, value2){
