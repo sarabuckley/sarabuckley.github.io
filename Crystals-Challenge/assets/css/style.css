@@ -1,0 +1,53 @@
+body {
+  
+    background-color: #F8DCE3;
+    font-family: 'Mali', cursive;
+}
+
+.jumbotron {
+    background-color: #3D2645;
+    color: white;
+}
+
+.card-header {
+    background-color: #A60067;
+}
+
+.card-body {
+    background-color: #E6B9D5;
+}
+
+.crystal-image {
+	margin-top: 15px;
+    margin-bottom: 15px;
+}    
+
+#number-to-guess {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D2645;
+}
+
+#totalScore {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D2645;	
+}
+
+#numWins {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D2645;	
+}
+
+#numLosses {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D2645;	
+}
+
+#statusMsg {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3D2645;	
+}
