@@ -20,9 +20,18 @@ body {
 .crystal-image {
 	margin-top: 15px;
     margin-bottom: 15px;
+    border-style: none;
+    border-color:  yellow;
 }    
 
-#number-to-guess {
+.crystal-image-mouseOver {
+	margin-top: 15px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color:  #A60067;
+} 
+
+#targetNumber {
     font-size: 20px;
     font-weight: 600;
     color: #3D2645;
