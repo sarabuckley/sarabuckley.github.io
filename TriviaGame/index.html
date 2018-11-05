@@ -19,20 +19,24 @@
 
 <body>
 
-   
+  <header>
+      <h1>Geography Trivia</h1>
+  </header>
   <div class="container">
-      <h2>Totally Trivial Trivia</h2>
-      <div class="row">
-            <div class="well well-lg">
-                <button type="button" class="btn" id="startGame">Start</button>
-                <div id="message"></div>
-                <div id="answer"></div>
-                <div id="timer"></div>
-                <div id="triviaQuestion"></div>
-                <div class="triviaAnswerBtns"></div>
-          </div>
-        </div>            
-  </div>
+          <button class="btn btn-primary" id="startBtn">Start</button>
+          <!-- Question Page -->
+          <div id="timer"></div> 
+          <div id="message"></div>
+          <div id="answer"></div>
+          <div id="triviaQuestion"></div>
+          <div class="triviaAnswerBtns"></div>
+          <!-- Scoreboard -->
+          <div id="finalMessage"></div>
+          <div id="correctAnswers"></div>
+          <div id="incorrectAnswers"></div>
+          <div id="unanswered"></div>
+          <button class="btn btn-primary" id="startOverBtn"></button>
+      </div>
       
 
   <!-- JAVASCRIPT  -->
