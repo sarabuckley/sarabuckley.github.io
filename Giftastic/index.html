@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giftastic</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+    <!-- Added link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    
+    <!-- Added link to Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Added link to CSS Style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+</head>
+
+<body>
+   <div class="container">
+    <h1>Happiness is a warm puppy.</h1>
+    <h2>...sloths are quite nice too...</h2>
+    <h2>see for yourself!</h2>
+    <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+    
+        <form id="animal-form">
+          <label for="animal-input">Need more cuteness? </label>
+          <input type="text" id="animal-input">
+
+          <!-- Button triggers new animal to be added -->
+          <input id="add-animal" type="submit" value="ADD">
+        </form>
+ 
+    
+    <!-- animals will Get Dumped Here -->
+    <div id="animals-view"></div>
+  
+    <!-- JAVASCRIPT  -->
+  <!-- ========================================= -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+  </div>    
+</body>
+
+</html>
