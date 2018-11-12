@@ -7,6 +7,25 @@ body {
 	text-transform: uppercase;
 }
 
+.jumbotron {
+  background: none;
+}
+
+.card {
+  background: none;
+}
+
+.card-header {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: grey;
+}
+
+.border {
+  border-width:5px !important;
+}
+
 h1 {
 	font-family: 'Fredoka One', cursive;
 	font-size: 55px;
@@ -38,6 +57,20 @@ button, #add-animal, #animal-input {
   border: solid white;
 }
 
+#add-animal{
+  display: block;
+  float: right;
+}
+
+#animal-input {
+  display: block;
+  float: right;
+}
+
+.form-control{
+  width: 200px;
+}
+
 label{
 	font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -56,16 +89,7 @@ p{
   
 }
 
-
-
-    div {
-      display: inline-block;
-      float: align left;
-    }
-
-
-    form,
-    input {
-      margin: 10px;
-    }
-   
+div{
+   display: inline-block;
+   float: align left;
+}

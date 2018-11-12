@@ -21,25 +21,46 @@
 
 <body>
    <div class="container">
-    <h1>Happiness is a warm puppy.</h1>
-    <h2>...sloths are quite nice too...</h2>
-    <h2>see for yourself!</h2>
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
 
-    
-        <form id="animal-form">
-          <label for="animal-input">Need more cuteness? </label>
-          <input type="text" id="animal-input">
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1>Happiness is a warm puppy.</h1>
+        <h2>...or a sloth. They're nice too...</h2>
+        <h2>try it yourself!</h2>
+    </div>
 
-          <!-- Button triggers new animal to be added -->
-          <input id="add-animal" type="submit" value="ADD">
-        </form>
- 
+    <div class="row">
+      <div class="col-lg-6">
+
+          <!-- Rendered Buttons will get Dumped Here  -->
+          <div id="buttons-view"></div>
+          
+          <form id="animal-form">
+              <input class="form-control" type="text" id="animal-input" value="your choice...">
+
+              <!-- Button triggers new animal to be added -->
+              <input id="add-animal" type="submit" value="ADD an Animal">
+          </form>
+
+          <!-- animals will Get Dumped Here -->
+          <div id="animals-view"></div>
+      </div>   
     
-    <!-- animals will Get Dumped Here -->
-    <div id="animals-view"></div>
-  
+      <div class="col-lg-6">
+      
+       <!-- Card for displaying favorite gifs -->
+       
+          <div class="card" class="border border-dark">
+            <div class="card-header">
+              Favorite GIFS
+            </div>
+            <div class="card-body">
+              <div id="favoriteGifs"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     <!-- JAVASCRIPT  -->
   <!-- ========================================= -->
   <script type="text/javascript" src="assets/javascript/game.js"></script>

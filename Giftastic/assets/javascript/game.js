@@ -1,15 +1,17 @@
 // Initialize variables
-var animals = ["Cat", "Dog", "Sloth", "Lemurs", "Seals", "Monkeys"];
+var animals = ["Cat", "Dog", "Sloth", "Lemurs", "Seals", "Monkeys", "Giraffes"];
 var results = [];
 var limit = 10;
 var offset = 0;
+var favCount = 0;
 var storedOffset = {
     Cat: 0,
     Dog: 0,
     Sloth: 0,
     Lemurs: 0,
     Seals: 0,
-    Monkeys: 0
+    Monkeys: 0,
+    Giraffes: 0
 };
 
 //Functions
@@ -17,16 +19,7 @@ var storedOffset = {
    function displayAnimalGifs() {
 
         var animal = $(this).attr("data-name");
-
-        //retrieve offset if it exists
         offset = storedOffset[animal];
-//        $.each(storedOffset, function(key, value) {
-//            console.log(key);
-//            if (key === animal) {
-//                offset = value;
-//            } else
-//                offset = 0;
-//        });
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=" + limit +"&offset=" + offset;
         
@@ -66,12 +59,11 @@ var storedOffset = {
               $("#animals-view").prepend(animalDiv);
 
              // Add title and rating
-              var pOne = $("<p>").html(results[i].title + "  rating: " + rating);         
+              var pOne = $("<p>").html(results[i].title + "&nbsp; &nbsp;[" + rating + "]&nbsp;&nbsp;&nbsp; <img src='assets/images/heart.PNG' id = 'favHeart' width=15>");         
               animalDiv.append(pOne)
               
             };  
         });
-
       }     
       
     function renderButtons() {
@@ -102,13 +94,30 @@ var storedOffset = {
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
         }
-
     }
+
+    function favHeartClicked() {
+
+        $("#favoriteGifs").append(this.parentElement.parentElement);
+        localStorage.setItem("fav" + favCount++, this.parentElement.parentElement.outerHTML);
+        
+    }
+
+    function loadFavGifs() {
+
+       keys = Object.keys(localStorage),
+       i = keys.length;
+
+       while (i--) {
+            $("#favoriteGifs").append(localStorage.getItem(keys[i]));
+        }
+    }    
 
 // Click Events
 
     $(document).on("click", ".animal-btn", displayAnimalGifs);
     $(document).on("click", ".gif", changeGifState); 
+    $(document).on("click", "#favHeart", favHeartClicked); 
 
     $("#add-animal").on("click", function(event) {
             event.preventDefault();
@@ -119,6 +128,7 @@ var storedOffset = {
         
 
  // Calling the renderButtons function to display the intial buttons
+    loadFavGifs();
     renderButtons();
   
       
