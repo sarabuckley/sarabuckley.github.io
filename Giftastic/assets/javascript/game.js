@@ -59,7 +59,7 @@ var storedOffset = {
               $("#animals-view").prepend(animalDiv);
 
              // Add title and rating
-              var pOne = $("<p>").html(results[i].title + "&nbsp; &nbsp;[" + rating + "]&nbsp;&nbsp;&nbsp; <img src='assets/images/heart.PNG' id = 'favHeart' width=15>");         
+              var pOne = $("<p>").html(results[i].title + "&nbsp; &nbsp;[" + rating + "]&nbsp;&nbsp;&nbsp; <img src='assets/images/heart.png' id = 'favHeart' width=15>");         
               animalDiv.append(pOne)
               
             };  
