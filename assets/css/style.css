@@ -1,0 +1,61 @@
+.container {
+    font-family: 'Work Sans', cursive;
+}
+
+.jumbotron {
+    color: white;
+    background-color: #012639;
+}
+
+h1 {
+	font-family: 'Work Sans', cursive;
+	font-size: 45px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Work Sans', cursive;
+  font-size: 30px;
+  color: #fff;
+}
+
+.card {
+    border-color:  #002E6D;
+    border-width: 2px;
+}
+
+thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+  }
+
+.table thead th {
+    text-align: left;  
+    border-bottom: none;
+ }
+
+.table thead td {
+   text-align: left;   
+}
+
+.card-header {
+    color: white;
+    background-color: #002E6D;
+}
+
+.card-body{
+    padding: 3%;
+}
+
+td {
+    width:20%
+}
+
+ #add-train {
+    color: white;
+    background-color: #002E6D;
+ }
+
+
