@@ -1,0 +1,48 @@
+
+
+#title {
+    
+    background: url('../images/paint-brush-stroke-6.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    font-family: 'Neucha', cursive;
+    text-align: center;
+    padding: 30px;
+}    
+
+
+#startBtn {
+    background-color:#1D9985;
+    font-family: 'Neucha', cursive;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.select-type,
+.select-time,
+.select-start {
+    font-family: 'Neucha', cursive; 
+    font-size: 3vh;
+    margin:60px;
+}
+#times,
+#label-times {
+    font-family: 'Neucha', cursive;  
+    font-size: 3vh; 
+    display: inline-block;
+}
+
+.select-type {
+    margin: 60px auto;
+    }
+
+.checkbox, 
+.label {
+ 
+    display: inline-block;
+}
+
+img.animatedGif{
+max-width: 100%;
+height: auto;
+}

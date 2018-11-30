@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Swole Mate</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+    <!-- Added link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Neucha|Patrick+Hand" rel="stylesheet">
+    
+    <!-- Added link to Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Added link to CSS Style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    
+    <!-- SCREEN 1 -->
+        <div class="swole" id="title">
+            <h1>SWOLEMATE</h1>
+        </div>
+
+        <div class="container">
+            <div class="select-type">
+                <div class="label">
+                    <label for="checkBox1">Body Weight</label>
+                </div>
+                <div class="checkbox">
+                        <input type="checkbox" name="checkBox1" id="checkBox1a">
+                </div>
+            </div>
+
+            <div class="select-type">
+                    <div class="label">
+                        <label for="checkBox2">Cardio</label>
+                    </div>
+                    <div class="checkbox">
+                            <input type="checkbox" name="checkBox2" id="checkBox2a">
+                    </div>
+            </div>
+            
+
+            
+            <div class="select-time">
+                <label id="label-times" for="times">How Much Time Do You Have?</label>
+                <select id="times">
+                    <option value="">5 minutes</option>
+                    <option value="">10 minutes</option>
+                    <option value="">15 minutes</option>
+                    <option value="">20 minutes</option>
+                    <option value="">25 minutes</option>
+                    <option value="">30 minutes</option>
+                    <option value="">35 minutes</option>
+                    <option value="">40 minutes</option>
+                    <option value="">45 minutes</option>
+                </select>
+            </div>
+
+            <div class="select-start">
+                <button type="button" class="btn" id="startBtn">Let's Get Started!</button>
+            </div>   
+    
+        <!-- SCREEN 2 -->
+            <div id=exercise-view></div>
+
+        <!-- SCREEN 3 -->
+            <div id = routineCompleteMsg1></div>
+            <div id = routineCompleteMsg1></div>
+
+        </div>    
+
+                <!-- JAVASCRIPT  -->
+    <!-- ========================================= -->
+    <script type="text/javascript" src="assets/javascript/routines.js"></script>
+
+    </div>
+</body>
+
+</html>
