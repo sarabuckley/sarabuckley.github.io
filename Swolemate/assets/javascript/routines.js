@@ -11,6 +11,7 @@ var gifTime = "";
 var gifIndex = 0;
 var playList=[];
 var image = "";
+var audio;
 
 var cardioArray = [
 
@@ -130,6 +131,10 @@ function createExerciseList() {
         //Start Dan's timer
         dansTimerFunc();
 
+        //Start music
+        accessSpotify();
+
+
         gifIndex = 0;     
         
         for (var i=0; i < routineLength+1; i++) {
@@ -137,11 +142,11 @@ function createExerciseList() {
             console.log("i: " + i);
 
             if (cardioChosen) {
-                gifTime = (cardioArray[i].time * i * 50); //TODO: Change to 1000
+                gifTime = (cardioArray[i].time * i * 1000); //TODO: Change to 50 to speed up
             } 
 
             else if (bodyweightChosen) {
-                gifTime = (bodyweightArray[i].time * i * 50);
+                gifTime = (bodyweightArray[i].time * i * 1000);
             }     
 
             console.log("routineLength: " + routineLength);
@@ -172,11 +177,13 @@ function displayExerciseGif () {
             if (toggleArrays) {
                 image = $("<img>").attr("src", cardioArray[gifIndex].gifURL);
                 var title = cardioArray[gifIndex].name;
+            //    iconImage = $("<img>").attr("src", "assets/images/carioIcon.png");
                 toggleArrays = false;
             }
             else { 
                 image = $("<img>").attr("src", bodyweightArray[gifIndex].gifURL);
                 var title = bodyweightArray[gifIndex].name;
+            //    iconImage = $("<img>").attr("src", "assets/images/bodyWeightIcon.png");
                 toggleArrays = true;
             }    
         }
@@ -184,20 +191,25 @@ function displayExerciseGif () {
         else if (cardioChosen) {
             image = $("<img>").attr("src", cardioArray[gifIndex].gifURL);
             var title = cardioArray[gifIndex].name;
+        //    iconImage = $("<img>").attr("src", "assets/images/carioIcon.png");
         } 
 
         else if (bodyweightChosen) {
             image = $("<img>").attr("src", bodyweightArray[gifIndex].gifURL);
             var title = bodyweightArray[gifIndex].name;
+        //    iconImage = $("<img>").attr("src", "assets/images/bodyWeightIcon.png");
         } 
 
         //var image = $("<img>").attr("src", cardioArray[gifIndex].gifURL);
         image.addClass("animatedGif");
         image.attr("data-state", "animate")
+        iconImage = "assets/images/bodyWeightIcon.png";
         var caption = $("<figcaption id='caption'>" + title + "</figcaption>");
-        
+        //iconImage.addClass("animatedGif");
+
         // Add image to div
         exerciseDiv.append(caption);
+        //exerciseDiv.append(iconImage);
         console.log("image src" + image.attr("src"));
         exerciseDiv.append(image);
        
@@ -289,7 +301,10 @@ function getPlaylist() {
         },
         success: function(data) {
         console.log(data);
-  //      playList = data.
+        //audio = $(playList[0].tracks.external_urls.spotify);
+        audio = data.tracks.items[0].track.external_urls.spotify;
+        console.log("audio: " + audio);
+        $("musicIframe").src = audio;
         }
     });
 }

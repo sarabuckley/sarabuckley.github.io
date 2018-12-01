@@ -45,13 +45,18 @@
 #caption {
     font-family: 'Neucha', cursive;
     font-size: 3vh;
-    padding-top: 10%;
+    padding-top: 2%;
 }
 
-img.animatedGif{
-max-width: 100%;
+.animatedGif{
+max-width: 50%;
 height: auto;
 }
+
+.iconGif{
+    width: 5%; 
+    height: auto;
+    }
 
 #routineCompleteMsg1 {
     font-family: 'Neucha', cursive;
