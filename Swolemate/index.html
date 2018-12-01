@@ -9,7 +9,8 @@
     <title>Swole Mate</title>
 
     <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         
     <!-- Added link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Neucha|Patrick+Hand" rel="stylesheet">
@@ -19,6 +20,9 @@
     
     <!-- Added link to CSS Style-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/circle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/firecircle.css">
+
 
 </head>
 
@@ -35,7 +39,7 @@
                     <label for="checkBox1">Body Weight</label>
                 </div>
                 <div class="checkbox">
-                        <input type="checkbox" name="checkBox1" id="checkBox1a">
+                        <input type="checkbox" name="checkBox1" id="checkBox1a" checked="true">
                 </div>
             </div>
 
@@ -52,16 +56,17 @@
             
             <div class="select-time">
                 <label id="label-times" for="times">How Much Time Do You Have?</label>
-                <select id="times">
-                    <option value="">5 minutes</option>
-                    <option value="">10 minutes</option>
-                    <option value="">15 minutes</option>
-                    <option value="">20 minutes</option>
-                    <option value="">25 minutes</option>
-                    <option value="">30 minutes</option>
-                    <option value="">35 minutes</option>
-                    <option value="">40 minutes</option>
-                    <option value="">45 minutes</option>
+                <select id="times" name="times">
+                    <option value="">Please choose one</option>
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                    <option value="20">20 minutes</option>
+                    <option value="25">25 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="35">35 minutes</option>
+                    <option value="40">40 minutes</option>
+                    <option value="45">45 minutes</option>
                 </select>
             </div>
 
@@ -70,17 +75,35 @@
             </div>   
     
         <!-- SCREEN 2 -->
-            <div id=exercise-view></div>
+            <div id="exercise-routines"></div>
+
+            <div class="timerwheels">
+                <div id="minute-timer" data-circle-startTime=60 data-circle-dialWidth=20 data-circle-size="250px"
+                        data-circle-skin="fire">
+                    <div class="loader-bg">
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <div id="full-timer" data-circle-dialWidth=20 data-circle-size="250px" data-circle-skin="fire">
+                    <div class="loader-bg">
+                        <div class="text"></div>
+                    </div>
+                </div>
+            </div>
 
         <!-- SCREEN 3 -->
-            <div id = routineCompleteMsg1></div>
-            <div id = routineCompleteMsg1></div>
-
+            <div id="routineCompleteMsg1"></div>
+            <div id="routineCompleteMsg2"></div>
+            <div id="routineCompleteGif"></div>
+            <div id="facebookShare" style="text-align:center"></div>
         </div>    
 
                 <!-- JAVASCRIPT  -->
     <!-- ========================================= -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script type="text/javascript" src="assets/javascript/routines.js"></script>
+    <script type="text/javascript" src="assets/javascript/circle.js"></script>
+    
 
     </div>
 </body>

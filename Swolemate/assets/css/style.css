@@ -42,7 +42,41 @@
     display: inline-block;
 }
 
+#caption {
+    font-family: 'Neucha', cursive;
+    font-size: 3vh;
+    padding-top: 10%;
+}
+
 img.animatedGif{
 max-width: 100%;
 height: auto;
+}
+
+#routineCompleteMsg1 {
+    font-family: 'Neucha', cursive;
+    font-size: 4vh;
+    padding-top: 10%;
+    text-align: center;
+}
+
+#routineCompleteMsg2 {
+    font-family: 'Neucha', cursive;
+    font-size: 3vh;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%
+}
+
+#routineCompleteGif {
+    text-align: center;
+}
+    
+#facebookShareLink{
+    background-color:#1D9985;
+    font-family: 'Neucha', cursive;
+    font-size: 3vh;
+    margin: 0 auto;
+    text-align: center;
+    position: center;
 }

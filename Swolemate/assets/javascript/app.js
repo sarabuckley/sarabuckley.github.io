@@ -1,72 +1,57 @@
+var sel;
+var times = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('select[name="times"]').onchange = changeEventHandler;
+}, false);
 
-$(".myInstance").Circlebar()
-Circlebar({
+function changeEventHandler(event) {
+    // You can use “this” to refer to the selected element.
+    if (!event.target.value) console.log("Please select one!");
+    else {
+        sel = event.target.value;
+        console.log("selected: " + sel);
+    }
+}
 
-    // starting time
-    startValue: 60,
 
-    // max time
-    maxValue: 10000,
 
-    // in milliseconds
-    counter: 1000,
+/*
+$("#startBtn").on("click", function () {
 
-    // should the circles styling alters according to progress level
-    triggerPercentage: false,
-
-    // timer, progress or manual
-    type: "timer",
-
-    // the width of the dial
-    dialWidth: 5,
-
-    // font size
-    fontSize: "20px",
-
-    // font color
-    fontColor: "rgb(135, 206, 235)",
-
-    // skin name
-    skin: "",
-
-    // the size of the circle
-    size: "70px"
-
-});
-
-$(document).ready(function () {
-    $("#circle-1").Circlebar({
-        maxValue: 20,
-        fontSize: "36px",
-        triggerPercentage: true
-    });
-    var t2 = new Circlebar({
-        element: ".circle-2",
-        maxValue: 252,
-        dialWidth: 40,
-        fontColor: "#777",
+    var maxTimes = sel;
+    var again;
+    console.log(maxTimes);
+    
+    $("#full-timer").Circlebar({
+        startTime: sel*60,
+        maxValue: sel*60,
         fontSize: "30px",
-        skin: "fire",
-        type: "manual"
-    });
+        triggerPercentage: true,
+        fontColor: "#777"
 
-    new Circlebar({
-        element: "#circle-3",
-        maxValue: 230,
-        size: "240px",
-        fontSize: "30px",
-        type: "progress"
     });
+    function cycleTimer() {
+
+        if (times < maxTimes) {
+            $("#minute-timer").Circlebar({
+                startTime: 60,
+                maxValue: 60,
+                fontSize: "30px",
+                triggerPercentage: true,
+                fontColor: "#777"
+
+            });
+            times++;
+            console.log(times);
+            again = setTimeout(cycleTimer, 60000);
+
+        } else {
+            clearTimeout(again);
+            times = 0;
+        }
+    };
+
+    cycleTimer();
+   
 });
-
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-
-(function () {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+*/
