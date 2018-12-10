@@ -318,7 +318,7 @@ function dansTimerFunc() {
     $("#full-timer").Circlebar({
         startTime: sel*60,
         maxValue: sel*60,
-        fontSize: "30px",
+        fontSize: "15px",
         triggerPercentage: true,
         fontColor: "#777"
 
@@ -329,9 +329,9 @@ function dansTimerFunc() {
             $("#minute-timer").Circlebar({
                 startTime: 60,
                 maxValue: 60,
-                fontSize: "30px",
+                fontSize: "15px",
                 triggerPercentage: true,
-                fontColor: "#777"
+                fontColor: "#333"
 
             });
             times++;
