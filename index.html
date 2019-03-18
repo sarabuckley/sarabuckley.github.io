@@ -1,50 +1,48 @@
-<!-- Activity 1:Basic HTML Bio -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Basic HTML Bio</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sara Buckley</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <!-- Site Header -->
-    <header>
-        <h1>Student Bio</h1>
-    </header>
+<div class="wrapper">
 
+  <header id="masthead">
     <div class="container">
-
-        <!--Section 1: Bio-->
-        <section id="main-bio">
-
-         <h2>Sara Buckley</h2> 
-
-         <!--Image -->
-         <img id="bio-image" src="https://placehold.it/200x200" alt="Sara Buckley">
-
-        <!-- Student Info -->
-         <p>Sara is an amazing person and a wonderful student. She is the best!!</p>
-         
-         <p>Blah blah blah blah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit diam odio, ac blandit risus scelerisque quis. Integer fermentum tempus magna, sed luctus risus aliquam non. Mauris blandit justo diam, nec eleifend ex dignissim at. Ut a malesuada mi. Proin vitae tristique tortor. Aenean pretium, ante in lacinia tincidunt, sapien magna iaculis orci, eget porttitor tellus sem sit amet enim.</p>
-         
-
-        </section> 
-
-        <!--Section 2: Contact Info-->
-        <section id="contact-info">
-         <h2> Contact Info </h2>
-         <ul>
-            <li><strong>Email:</strong> <a href="#">sara.buckley@live.com</a></li>
-            <li><strong>Github:</strong> <a href="#">sarabu2</a></li>
-            <li><strong>Portfolio:</strong><a href="#"> coming soon</a></li>
-         </ul>
-        </section>
+      <a href="index.html" id="logo">Sara Buckley</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
+  <main class="container">
+    <section class="main-section">
+      <h1>About Me</h1>
+
+      <img src="assets/images/portfolio-about-me.png" class="auth-image" alt="placeholder">
+
+      <p>My name is Sara Buckley. I’m a recent graduate of the University of Washington with a B.A. in Integrated Social Sciences. I enjoyed the experience so much, I decided to return to school again, this time to brush on my coding skills. My last gig was at Microsoft, working on the Host Integration Server product. The languages I used then were Visual Basic; SQL Server and COBOL (yup, I even helped fix the Y2K bug!). So far I am finding full stack web development to be an amazing and creative process. </p>
+
+      <p>When I’m not coding, I’m probably hanging out with family, vacuuming up cat hair, playing board games, and enjoying the great outdoors in the Northwest.</p>
+
+    </section>
+
+  </main>
+  <div class="push"></div>
+</div>
+
+  <footer>
+    <div class="container">
+      &copy; Copyright
+    </div>
+  </footer>
 </body>
-
 </html>
